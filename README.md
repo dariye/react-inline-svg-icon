@@ -14,7 +14,7 @@ yarn add react-inline-svg-icon --save
 # Usage
 
 ```
-import Icon from 'react-inline-svg-icon';
+import { Icon } from 'react-inline-svg-icon';
 
 
 ...

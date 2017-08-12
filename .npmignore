@@ -1,2 +1,5 @@
 .babelrc
 lib
+stories
+specs
+
