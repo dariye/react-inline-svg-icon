@@ -1,5 +1,5 @@
 # react-inline-svg-icon
-`react-inline-svg` is a simple react component that renders inline svg.
+`react-inline-svg-icon` is a simple react component that renders inline svg.
 
 # Features
 - Inline SVG
