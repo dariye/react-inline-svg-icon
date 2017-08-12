@@ -1,6 +1,8 @@
 # react-inline-svg-icon
 `react-inline-svg-icon` is a simple react component that renders inline svg.
 
+[View demo](react-inline-svg-icon.now.sh)
+
 # Features
 - Inline SVG
 
@@ -42,6 +44,15 @@ render () {
 | title       | 'icon'  | This specifies the `<title/>` tag for the svg |
 
 
+# Demo using react-storybook
+
+```
+git clone git@github.com:pauldariye/react-inline-svg-icon.git
+cd react-inline-svg-icon
+npm install # or yarn
+npm run storybook
+```
+Goto [localhost:6060](http://localhost:6006/)
 
 # How to add new icons
  1. Visit https://goo.gl/wL4FWi
@@ -64,3 +75,11 @@ render () {
 - [Code reuse](https://goo.gl/q8TvuL)
 - [CSS Tricks](https://goo.gl/gbx4bD)
 - [Building a React Component Library](https://hackernoon.com/building-a-react-component-library-part-1-d8a1e248fe6c)
+
+# Icon Credits
+- [BudIcons](https://budicon.co/) (Not FREE. I'm using a few that I purchased
+    out of the icon pack)
+- KΛPKLΛM from the [Noun Project](https://thenounproject.com)
+- mikicon from the [Noun Project](https://thenounproject.com)
+- Nirbhay from the [Noun Project](https://thenounproject.com)
+- Martina Krasnayová from the [Noun Project](https://thenounproject.com)
