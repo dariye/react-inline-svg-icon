@@ -22,7 +22,7 @@ import { Icon } from 'react-inline-svg-icon';
 render () {
   return (
     <div>
-      <Icon icon="menu" color="#1abc9c" />
+      <Icon name="menu" color="#1abc9c" />
     </div>
   )
 }
@@ -38,6 +38,9 @@ render () {
 | ----------- | ------- | ------------------------- |
 | size        | 25      | This specifies the size of the icon i.e width (the height is set to auto | 
 | color       | #000    | This specifies the fill color of the shape |
+| name        |         | This specifies the name of the icon to render |
+| title       | 'icon'  | This specifies the `<title/>` tag for the svg |
+
 
 
 # How to add new icons
