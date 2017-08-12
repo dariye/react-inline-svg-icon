@@ -11,7 +11,8 @@
     "lint:watch": "esw -w lib/**",
     "prepare": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "start": "start-storybook -p 6006"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@storybook/addon-info": "^3.2.0",
     "@storybook/addon-knobs": "^3.2.0",
+    "@storybook/addon-options": "^3.2.3",
     "@storybook/react": "^3.2.3",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",

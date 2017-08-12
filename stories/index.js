@@ -14,14 +14,14 @@ stories.addDecorator(withKnobs);
 
 stories
   .add('default',
-    withInfo('without any props')
+    withInfo('without specifying an icon name')
     (() => (
-      <Icon color={text('Color', '#E74C3C')} size={number('Size', 25)} title={text('Title', 'I heart you')} />
+      <Icon title={text('Title', 'I heart you')} color={text('Color', '#E74C3C')} size={number('Size', 25)}  />
     ))
   )
-  .add('add',
-    withInfo('without any props')
+  .add('by name',
+    withInfo('pass in the right name prop to render desired icon from the following: add, arrow-down, arrow-left')
     (() => (
-      <Icon />
+      <Icon name={text('Name', 'add')} title={text('Title', 'I choose an icon :)')}  color={text('Color', '#E74C3C')} size={number('Size', 25)} />
     ))
   )

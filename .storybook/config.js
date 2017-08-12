@@ -2,6 +2,12 @@
 
 import { configure } from '@storybook/react';
 import { setDefaults } from '@storybook/addon-info';
+import { setOptions } from '@storybook/addon-options';
+
+setOptions({
+  name: 'react-inline-svg-icon',
+  url: 'https://github.com/pauldariye/react-inline-svg-icon'
+})
 
 // addon-info
 setDefaults({
