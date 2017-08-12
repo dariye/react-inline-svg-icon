@@ -30,6 +30,9 @@
   },
   "homepage": "https://github.com/pauldariye/react-inline-svg-icon#readme",
   "devDependencies": {
+    "@storybook/addon-info": "^3.2.0",
+    "@storybook/addon-knobs": "^3.2.0",
+    "@storybook/react": "^3.2.3",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
@@ -47,8 +50,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
-    "regenerator-runtime": "^0.10.5",
-    "@storybook/react": "^3.2.3"
+    "regenerator-runtime": "^0.10.5"
   },
   "jest": {
     "verbose": true,
