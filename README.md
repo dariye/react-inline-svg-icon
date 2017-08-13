@@ -1,7 +1,7 @@
 # react-inline-svg-icon
 `react-inline-svg-icon` is a simple react component that renders inline svg.
 
-[View demo](react-inline-svg-icon.now.sh)
+[View demo](https://react-inline-svg-icon.now.sh)
 
 # Features
 - Inline SVG
@@ -9,8 +9,7 @@
 # Installation
 
 ```
-npm install react-inline-svg-icon --save  # or
-yarn add react-inline-svg-icon --save
+npm i react-inline-svg-icon --save  # or yarn add react-inline-svg-icon --save
 ```
 
 # Usage
