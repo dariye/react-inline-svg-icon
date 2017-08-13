@@ -20,7 +20,7 @@ stories
     ))
   )
   .add('by name',
-    withInfo('pass in the right name prop to render desired icon from the following: add, arrow-down, arrow-left')
+    withInfo('pass in the right name prop to render desired icon from the following: add, arrow-down, arrow-left, arrow-right, bell, bookmark, bookmarked, bulb, chat-group, caht, down, clock, close, compass, delete, download, facebook, heart, hearted, location, linkedin, menu, more, paperclip-attachment, paperclip, path, pencil, plus, quote-left, search, send, share, sidebar-close, tag, twitter, upvote, upvoted, user-group, user')
     (() => (
       <Icon name={text('Name', 'add')} title={text('Title', 'I choose an icon :)')}  color={text('Color', '#E74C3C')} size={number('Size', 25)} />
     ))
