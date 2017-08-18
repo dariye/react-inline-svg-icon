@@ -1,6 +1,6 @@
 {
   "name": "react-inline-svg-icon",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React component to render inline svg icons",
   "main": "build/index.js",
   "scripts": {
