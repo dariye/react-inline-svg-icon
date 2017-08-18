@@ -37,9 +37,10 @@ render () {
 
 | name        | default | description               |
 | ----------- | ------- | ------------------------- |
-| size        | 25      | This specifies the size of the icon i.e width (the height is set to auto | 
+| className   | -       | This specifies a css class for an icon |
 | color       | #000    | This specifies the fill color of the shape |
 | name        |         | This specifies the name of the icon to render |
+| size        | 25      | This specifies the size of the icon i.e width (the height is set to auto | 
 | title       | 'icon'  | This specifies the `<title/>` tag for the svg |
 
 
@@ -62,7 +63,7 @@ Goto [localhost:6060](http://localhost:6006/)
  4. Add new case (in lowercase i.e 'clock' ) within the switch statement below
  Sort cases in alphabetical order
  5. Paste svg path code in case return statement like so `return ( <g>[PASTE YOUR SVG PATH CODE HERE]</g>)`
- 6. You can now use your svg icon like so `<Icon icon='clock' size={25} />`
+ 6. You can now use your svg icon like so `<Icon name='clock' size={25} />`
  anywhere after you import this file
  7. Add a test case in the 'Icons.test.js'
 
