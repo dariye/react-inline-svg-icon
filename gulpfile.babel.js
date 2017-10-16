@@ -25,7 +25,9 @@ const paths = {
 gulp.task('hello', () => console.log('howdy'))
 
 gulp.task('icons', () => {
-  const icons = gulp.src(`${paths.src}/**/*.svg`)
+  const icons = []
+
+  const optimizeIcons = gulp.src(`${paths.src}/**/*.svg`)
     .pipe(plugins.svgmin({
       plugins: [
         {
@@ -48,6 +50,9 @@ gulp.task('icons', () => {
         },
         {
           removeDesc: true
+        },
+        {
+          cleanupIDs: false
         },
         {
           removeUselessDefs: true
@@ -89,9 +94,6 @@ gulp.task('icons', () => {
           removeUnusedNS: true
         },
         {
-          cleanupIDs: true
-        },
-        {
           moveElemsAttrsToGroup: true
         },
         {
@@ -110,7 +112,9 @@ gulp.task('icons', () => {
           transformWithOnePath: true
         },
         {
-          removeAttrs: true
+          removeAttrs: {
+            attrs: ["class"]
+          }
         },
         {
           removeStyleElement: true
@@ -125,20 +129,27 @@ gulp.task('icons', () => {
         const name = slug(path.basename(chunk.path, path.extname(chunk.path)))
        
         const $ = cheerio.load(chunk.contents.toString())
-        const data = $('path').attr('d') // Get svg icon path data
-        
-        const icon = { name, data }
+        const data = $('svg').html()
 
-        this.push(icon)
+        this.push({ name, data })
 
         return cb()
       }
     ))
+    .pipe(plugins.tap(function(icon) {
+      console.log(icon)
+      // DOESN'T Work!
+      gulp.src(`${path.src}/components/icon.js`)
+        .pipe(plugins.inject.after('/* inject:icon */', '\n      <case'))
+        .pipe(gulp.dest('.build'))
 
-  const component = gulp.src(`${path.src}/components/icon.js`)
-    .pipe(plugins.inject.after('/* inject:icon */', '\n      <case'))
-  
-  return merge(icons, component) 
+    }))
+
+  // const component = gulp.src(`${path.src}/components/icon.js`)
+  //   .pipe(plugins.tap(function
+  //   .pipe(plugins.inject.after('#<{(| inject:icon |)}>#', '\n      <case'))
+  //
+  // return merge(icons, component) 
 })
 
 // gulp.task('build', () => )

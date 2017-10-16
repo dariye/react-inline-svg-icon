@@ -3467,6 +3467,14 @@ gulp-load-plugins@^1.5.0:
     micromatch "^2.3.8"
     resolve "^1.1.7"
 
+gulp-subtask@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/gulp-subtask/-/gulp-subtask-0.3.4.tgz#3a8f40e964a6053a9eae14a287a9b7fb7ceb7650"
+  dependencies:
+    gulp "^3.8.10"
+    gulp-util "^3.0.3"
+    through2 "^0.6.3"
+
 gulp-svgmin@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/gulp-svgmin/-/gulp-svgmin-1.2.4.tgz#a4aa9e2615cf1105ef555aea86e86296cc20e273"
@@ -3480,7 +3488,13 @@ gulp-svgo@^1.2.5:
   dependencies:
     svgo "^0.7.2"
 
-gulp-util@^3.0.0, gulp-util@^3.0.4, gulp-util@^3.0.8:
+gulp-tap@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-tap/-/gulp-tap-1.0.1.tgz#e671124e1259b4cea219ed1ca97b7f585c334690"
+  dependencies:
+    through2 "^2.0.3"
+
+gulp-util@^3.0.0, gulp-util@^3.0.3, gulp-util@^3.0.4, gulp-util@^3.0.8:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
@@ -3503,7 +3517,7 @@ gulp-util@^3.0.0, gulp-util@^3.0.4, gulp-util@^3.0.8:
     through2 "^2.0.0"
     vinyl "^0.5.0"
 
-gulp@^3.9.1:
+gulp@^3.8.10, gulp@^3.9.1:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/gulp/-/gulp-3.9.1.tgz#571ce45928dd40af6514fc4011866016c13845b4"
   dependencies:
@@ -6933,7 +6947,7 @@ throat@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-3.2.0.tgz#50cb0670edbc40237b9e347d7e1f88e4620af836"
 
-through2@^0.6.1:
+through2@^0.6.1, through2@^0.6.3:
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-0.6.5.tgz#41ab9c67b29d57209071410e1d7a7a968cd3ad48"
   dependencies:
