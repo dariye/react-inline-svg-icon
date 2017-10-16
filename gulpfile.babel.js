@@ -68,19 +68,7 @@ gulp.task('icons', () => {
           removeEmptyContainers: true
         },
         {
-          removeViewBox: false
-        },
-        {
           cleanUpEnableBackground: true
-        },
-        {
-          minifyStyles: true
-        },
-        {
-          convertStyleToAttrs: true
-        },
-        {
-          convertColors: false
         },
         {
           convertPathData: true
@@ -104,12 +92,6 @@ gulp.task('icons', () => {
           cleanupIDs: true
         },
         {
-          cleanupNumericValues: false
-        },
-        {
-          cleanupListOfValues: false
-        },
-        {
           moveElemsAttrsToGroup: true
         },
         {
@@ -119,34 +101,16 @@ gulp.task('icons', () => {
           collapseGroups: true
         },
         {
-          removeRasterImages: false
-        },
-        {
           mergepaths: true
         },
         {
           convertShapeToPath: true
         },
         {
-          sortAttrs: false
-        },
-        {
           transformWithOnePath: true
         },
         {
-          removeDimensions: false
-        },
-        {
           removeAttrs: true
-        },
-        {
-          removeElementsByAttr: true
-        },
-        {
-          addClassesToSVGElement: false
-        },
-        {
-          addAttributesToSVGElement: false
         },
         {
           removeStyleElement: true
@@ -157,11 +121,16 @@ gulp.task('icons', () => {
       ]
     }))
     .pipe(through({ objectMode: true }, 
-      (chunk, enc, cb) => {
-        const contents = chunk.contents.toString()
-        const $ = cheerio.load(contents, { xmlMode: true })
-        // const path = $('svg > path')
-        console.log(contents) 
+      function (chunk, enc, cb) {
+        const name = slug(path.basename(chunk.path, path.extname(chunk.path)))
+       
+        const $ = cheerio.load(chunk.contents.toString())
+        const data = $('path').attr('d') // Get svg icon path data
+        
+        const icon = { name, data }
+
+        this.push(icon)
+
         return cb()
       }
     ))
